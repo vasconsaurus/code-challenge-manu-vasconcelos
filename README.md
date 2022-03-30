@@ -10,4 +10,26 @@ We will be looking at:
  * Code readability and clarity
  * [Self]documentation
 
-Bonus points for making features tested
+Bonus points for making features tested (the app has test for Rspec, but you're free to choose Mintest if you prefer (it's also set up))
+
+## Instructions to set up
+
+Clone the project:
+```bash
+git clone https://github.com/Earthster/code-challenge-modal.git
+```
+
+Get into the folder:
+```bash
+cd code-challenge-modal
+```
+
+Migrate your database:
+```bash
+rails db:migrate
+```
+
+Run the server:
+```bash
+rails s
+```

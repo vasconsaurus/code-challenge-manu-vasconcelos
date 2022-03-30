@@ -1,24 +1,13 @@
-# README
+# Coding challenge: modal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a self-contained coding challenge, to be able to look at some code together. The important thing is to look at the code together, and to understand your reasoning about it. Also, more important than finishing it is to think about it.
 
-Things you may want to cover:
+It's a small monolithic rails 7 app (with practically no features implemented in it). To participate in the challenge, please clone the repository, then go to this repository's issues, and create a copy of each one of the issues (I'm afraid you'll have to copy-paste the contents of those, since cloning does not carry the issues).
 
-* Ruby version
+We will be looking at:
 
-* System dependencies
+ * Code quality and design patterns
+ * Code readability and clarity
+ * [Self]documentation
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Bonus points for making features tested

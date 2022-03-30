@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Cycle.create([
+  { name: 'Inkjet printer' },
+  { name: 'Apple iPhone' },
+  { name: 'VW Beetle' },
+  { name: '1-month veggies locally sourced' },
+  { name: 'Earthster operations' },
+  { name: 'Electric guitar' },
+  { name: 'Pressure pump' },
+])

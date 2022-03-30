@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 Cycle.create([
-  { name: 'Inkjet printer' },
-  { name: 'Apple iPhone' },
-  { name: 'VW Beetle' },
-  { name: '1-month veggies locally sourced' },
-  { name: 'Earthster operations' },
-  { name: 'Electric guitar' },
-  { name: 'Pressure pump' },
+  { name: 'Inkjet printer', public_status: true },
+  { name: 'Apple iPhone', public_status: true },
+  { name: 'VW Beetle', public_status: true },
+  { name: '1-month veggies locally sourced', public_status: true },
+  { name: 'Earthster operations', public_status: true },
+  { name: 'Electric guitar', public_status: true },
+  { name: 'Pressure pump', public_status: false },
 ])

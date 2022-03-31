@@ -7,5 +7,8 @@
   </div>
 </div>
 <div id="modal" data-controller="modal" class="modal --hidden" data-modal-hidden-class="--hidden">
-  <div class="modal__content" data-modal-target="content"></div>
+  <div class="modal__card">
+    <div class="modal__content" data-modal-target="content"></div>
+    <%= inline_svg_tag 'icon-close-2.svg', class: 'modal__close-button' %>
+  </div>
 </div>

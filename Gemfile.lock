@@ -104,6 +104,9 @@ GEM
     importmap-rails (1.0.3)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    inline_svg (1.8.0)
+      activesupport (>= 3.0)
+      nokogiri (>= 1.6)
     io-console (0.5.11)
     io-wait (0.2.1)
     irb (1.4.1)
@@ -247,6 +250,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   importmap-rails
+  inline_svg
   jbuilder
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)

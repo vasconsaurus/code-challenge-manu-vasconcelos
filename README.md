@@ -6,7 +6,7 @@ It's a small monolithic rails 7 app (with practically no features implemented in
 
 ## Instructions to fulfill the challenge
 
-To participate in the challenge, please clone the repository, then go to this repository's issues, and create a copy of each one of the issues (I'm afraid you'll have to copy-paste the contents of those, since cloning does not carry the issues).
+To participate in the challenge, please **fork** the repository, then go to this repository's issues, and create a copy of each one of the issues (I'm afraid you'll have to copy-paste the contents of those, since cloning does not carry the issues).
 
 For each issue in GitHub, create a Pull Request (and do **not** merge them!). For issues that depend on each other, please branch out from the branch the issue depends on instead of from main.
 

@@ -20,9 +20,9 @@ Bonus points for writing tests for all the issues (the app has test for RSpec, b
 
 ## Instructions to set up
 
-Clone the project:
+Clone the project (substitute `MyGithubUser` with your GitHub user name):
 ```bash
-git clone git@github.com:Earthster/code-challenge-modal.git
+git clone git@github.com:MyGithubUser/code-challenge-modal.git
 ```
 
 Get into the folder and install gems:

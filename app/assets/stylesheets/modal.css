@@ -17,8 +17,8 @@
   position: relative;
   border-radius: 3px;
   width: 100%;
-  max-width: 20rem;
-  padding: 1rem;
+  max-width:25rem;
+  padding: 1.5rem 1rem;
   background-color: #262626;
 }
 
@@ -40,4 +40,58 @@
   width: 1.25rem;
   height: 1.25rem;
   color: var(--primary-color);
+}
+
+input[type=text] {
+  padding: 10px;
+  margin-top:10px;
+  width: 100%;
+  border: 0;
+  height: 50px;
+  border-radius: 24px;
+}
+
+input[type=text]::placeholder {
+  color: darkgray;
+}
+
+input[type=text-area] {
+  padding: 10px;
+  margin-top:10px;
+  width: 100%;
+  border-radius: 8px;
+  border: 0;
+  height: 50px;
+}
+
+input[type=submit] {
+  border-radius: 24px;
+  border: 0;
+  padding: 10px;
+  width: 80%;
+  margin: 0 10%;
+  background-color: #17fec8;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+#email {
+  color: darkgray;
+}
+
+#message {
+  color: darkgray;
+}
+
+.modal__card p{
+  font-size: 0.85rem;
+  line-height: 0.5rem;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0.25px solid white;
 }

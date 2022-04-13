@@ -13,5 +13,5 @@ class InvitationsController < ApplicationController
     params.require(:invitation).permit(:email, :message)
   end
 
-  respond_to :js
+  respond_to? :js
 end

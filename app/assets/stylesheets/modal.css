@@ -43,16 +43,12 @@
 }
 
 input[type=text] {
-  padding: 10px;
+  padding: 10px 20px;
   margin-top:10px;
   width: 100%;
   border: 0;
   height: 50px;
   border-radius: 24px;
-}
-
-input[type=text]::placeholder {
-  color: darkgray;
 }
 
 input[type=text-area] {
@@ -71,6 +67,7 @@ input[type=submit] {
   width: 80%;
   margin: 0 10%;
   background-color: #17fec8;
+  font-size: 0.7rem;
 }
 
 label {
@@ -89,6 +86,10 @@ label {
 .modal__card p{
   font-size: 0.85rem;
   line-height: 0.5rem;
+}
+
+.modal__cycle-name {
+  font-weight:300;
 }
 
 hr {

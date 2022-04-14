@@ -51,13 +51,14 @@ input[type=text] {
   border-radius: 24px;
 }
 
-input[type=text-area] {
-  padding: 0 10px;
+.message {
+  padding: 10px;
   margin-top:10px;
   width: 100%;
   border-radius: 8px;
   border: 0;
   height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 input[type=submit] {
@@ -94,5 +95,5 @@ label {
 
 hr {
   margin: 20px 0;
-  border: 0.25px solid white;
+  opacity: 0.5;
 }

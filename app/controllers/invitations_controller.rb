@@ -1,6 +1,11 @@
 class InvitationsController < ApplicationController
   def new
     @invitation = Invitation.new
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def create
@@ -12,6 +17,4 @@ class InvitationsController < ApplicationController
   def invitation_params
     params.require(:invitation).permit(:email, :message)
   end
-
-  respond_to? :js
 end

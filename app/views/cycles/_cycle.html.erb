@@ -1,3 +1,3 @@
-<div class="cycles-table__row">
-  <%= cycle.name %>
+<div class="cycles-table__row"  data-action="click->modal#open">
+  <%= link_to cycle.name, new_invitation_path, remote: true %>
 </div>

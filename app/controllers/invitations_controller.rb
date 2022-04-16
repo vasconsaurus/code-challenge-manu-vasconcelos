@@ -9,8 +9,9 @@ class InvitationsController < ApplicationController
 
   def create
     email_ary = params[:invitation][:email].split(" ")
+
     if email_ary.count > 1
-      @invitation = Invitation.new
+      @invitation = Invitation.new(invitation_params)
       @invitation.name = email_ary[0]
       @invitation.email = email_ary[1]
       @invitation.cycle_id = params[:invitation][:cycle_id]

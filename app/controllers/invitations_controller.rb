@@ -20,7 +20,7 @@ class InvitationsController < ApplicationController
       @invitation.name = email_params.split(/@/, 2).first
     end
 
-    if @invitation.save!
+    if @invitation.save
       redirect_to root_path, notice: 'Invitation was succesfully created'
     else
       # this does not work

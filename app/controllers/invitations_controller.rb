@@ -17,7 +17,8 @@ class InvitationsController < ApplicationController
       @invitation.name = email_ary[0]
       @invitation.email = email_ary[1]
     else
-      @invitation.name = email_params.split(/#|@/, 2).first
+      @invitation.name = email_params.split(/@/, 2).first
+      raise
     end
 
     if @invitation.save!

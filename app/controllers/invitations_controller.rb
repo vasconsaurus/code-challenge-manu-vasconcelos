@@ -14,10 +14,8 @@ class InvitationsController < ApplicationController
       @invitation = Invitation.new(invitation_params)
       @invitation.name = email_ary[0]
       @invitation.email = email_ary[1]
-      @invitation.cycle_id = params[:invitation][:cycle_id]
     else
       @invitation = Invitation.new(invitation_params)
-      @invitation.cycle_id = params[:invitation][:cycle_id]
     end
 
     if @invitation.save!
@@ -32,6 +30,6 @@ class InvitationsController < ApplicationController
   private
 
   def invitation_params
-    params.require(:invitation).permit(:email, :message, :name)
+    params.require(:invitation).permit(:email, :message, :name, :cycle_id)
   end
 end

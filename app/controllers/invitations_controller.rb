@@ -8,22 +8,24 @@ class InvitationsController < ApplicationController
   end
 
   def create
-    # hash with email string, break string, turn into array
-    email_ary = h[:email].split(" ")
-    # if email array has 2 elements, first is name, second is email
+    email_ary = params[:invitation][:email].split(" ")
     if email_ary.count > 1
-      # save instance with name and email
       @invitation = Invitation.new
       @invitation.name = email_ary[0]
       @invitation.email = email_ary[1]
-      @invitation.cycle_id = #????
+      @invitation.cycle_id = params[:invitation][:cycle_id]
     else
       @invitation = Invitation.new(invitation_params)
+      @invitation.cycle_id = params[:invitation][:cycle_id]
     end
-    # else it only has an email
 
-    @invitation.save
-    # se salvar o veículo? e se não salvar?
+    if @invitation.save!
+      redirect_to root_path, notice: 'Invitation was succesfully created'
+    else
+      # this does not work
+      render :new, notice: 'Invitation was not created'
+    end
+    raise
   end
 
   private

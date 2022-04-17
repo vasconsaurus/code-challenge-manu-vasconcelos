@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :invitation do
-    email { "MyString" }
+    email { "test@example.com" }
     message { "MyText" }
+    cycle
   end
 end

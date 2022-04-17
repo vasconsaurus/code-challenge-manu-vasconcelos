@@ -12,17 +12,16 @@ class InvitationsController < ApplicationController
 
     @invitation = Invitation.new(invitation_params)
 
-    if email_ary.count > 1
-      @invitation.name = email_ary[0]
-      @invitation.email = email_ary[1]
-    else
-      @invitation.name = email_params.split(/@/, 2).first
+    @invitation.email = email_ary.pop
+    @invitation.name = email_ary.join(' ')
+
+    if @invitation.name.blank?
+      @invitation.name = @invitation.email.split('@', 2).first
     end
 
     if @invitation.save
       redirect_to root_path, notice: 'Invitation was succesfully created'
     else
-      # this does not work
       render :new, notice: 'Invitation was not created'
     end
 

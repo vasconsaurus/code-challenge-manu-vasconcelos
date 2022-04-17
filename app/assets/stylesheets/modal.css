@@ -49,6 +49,7 @@ input[type=text] {
   border: 0;
   height: 50px;
   border-radius: 24px;
+  color: #747474;
 }
 
 .message {
@@ -59,6 +60,8 @@ input[type=text] {
   border: 0;
   height: 50px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  color: #747474;
 }
 
 input[type=submit] {

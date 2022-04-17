@@ -13,4 +13,4 @@ document.querySelector('.modal__content').innerHTML = `
     <%= form.submit 'SEND INVITATION'%>
   <% end %>
 `
-document.querySelector('#modal').classList.remove('--hidden')
+document.querySelector('#modal').openModal()

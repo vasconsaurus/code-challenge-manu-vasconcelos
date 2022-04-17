@@ -8,7 +8,6 @@ export default class extends Controller {
     this.element.openModal = this.open.bind(this);
     this.element.closeModal = this.close.bind(this)
     this.isOpen = !this.element.classList.contains(this.hiddenClass);
-    console.log(this.element.openModal)
   }
 
   close(){

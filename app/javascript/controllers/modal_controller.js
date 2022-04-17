@@ -7,8 +7,8 @@ export default class extends Controller {
   connect() {
     this.element.openModal = this.open.bind(this);
     this.element.closeModal = this.close.bind(this)
+    this.element.setContentModal = this.setContent.bind(this);
     this.isOpen = !this.element.classList.contains(this.hiddenClass);
-    console.log(this.element.openModal)
   }
 
   close(){
@@ -20,5 +20,9 @@ export default class extends Controller {
     if(this.isOpen) return;
     this.isOpen = true;
     this.element.classList.remove(this.hiddenClass)
+  }
+
+  setContent(content){
+    this.contentTarget.innerHTML = content
   }
 }

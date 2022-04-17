@@ -2,7 +2,6 @@ class InvitationsController < ApplicationController
   def new
     @invitation = Invitation.new(cycle: Cycle.find(params[:cycle_id]))
     respond_to do |format|
-      format.html
       format.js
     end
   end

@@ -1,4 +1,6 @@
-document.querySelector('.modal__content').innerHTML = `
+const modalController = document.querySelector('#modal')
+
+modalController.setContentModal(`
   <%= form_with model: @invitation do |form| %>
     <%= form.label :email, 'Share cycle with a new Customer:' %>
     <%= form.text_field :email, placeholder: 'Email Addresses...', class: 'email' %>
@@ -12,5 +14,6 @@ document.querySelector('.modal__content').innerHTML = `
     <%= form.hidden_field :cycle_id, value: @invitation.cycle.id %>
     <%= form.submit 'SEND INVITATION'%>
   <% end %>
-`
-document.querySelector('#modal').classList.remove('--hidden')
+`)
+
+modalController.openModal()

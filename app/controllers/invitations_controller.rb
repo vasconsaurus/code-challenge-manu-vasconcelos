@@ -8,23 +8,31 @@ class InvitationsController < ApplicationController
 
   def create
     email_params = params[:invitation][:email]
-    email_ary = email_params.split(" ")
 
-    @invitation = Invitation.new(invitation_params)
+    multiple_emails_ary = email_params.split(",")
 
-    @invitation.email = email_ary.pop
-    @invitation.name = email_ary.join(' ')
+    multiple_emails_ary.each do |email_ary|
+      email_ary = email_ary.split(" ")
+      invitation = Invitation.new(invitation_params)
 
-    if @invitation.name.blank?
-      @invitation.name = @invitation.email.split('@', 2).first
+      invitation.email = email_ary.pop
+      invitation.name = email_ary.join(' ')
+
+      if invitation.name.blank?
+        invitation.name = invitation.email.split('@', 2).first
+      end
+
+      invitation.save
+
+      # invitation_ary = []
+      # invitation_ary << invitation.save
     end
 
-    if @invitation.save
-      redirect_to root_path, notice: 'Invitation was succesfully created'
-    else
-      render :new, notice: 'Invitation was not created'
-    end
-
+      # if @invitation.save
+      #   redirect_to root_path, notice: 'Invitation was succesfully created'
+      # else
+      #   render :new, notice: 'Invitation was not created'
+      # end
   end
 
   private

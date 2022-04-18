@@ -27,9 +27,9 @@ class InvitationsController < ApplicationController
     end
 
     if invitation_ary.all?
+      # notices don't work, I need to add notices to the template
       redirect_to root_path, notice: 'Invitation was succesfully created'
     else
-      # this doesn't work
       render :new, notice: 'Invitation was not created'
     end
   end

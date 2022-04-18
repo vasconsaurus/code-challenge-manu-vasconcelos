@@ -22,17 +22,18 @@ class InvitationsController < ApplicationController
         invitation.name = invitation.email.split('@', 2).first
       end
 
-      invitation.save
-
-      # invitation_ary = []
-      # invitation_ary << invitation.save
+      @invitation_ary = []
+      @invitation_ary << invitation.save
     end
 
-      # if @invitation.save
-      #   redirect_to root_path, notice: 'Invitation was succesfully created'
-      # else
-      #   render :new, notice: 'Invitation was not created'
-      # end
+    @invitation_ary.each do |invitation|
+      if invitation
+        redirect_to root_path, notice: 'Invitation was succesfully created'
+      else
+        # this doesn't work
+        render :new, notice: 'Invitation was not created'
+      end
+    end
   end
 
   private

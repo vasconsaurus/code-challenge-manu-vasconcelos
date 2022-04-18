@@ -23,7 +23,9 @@ class InvitationsController < ApplicationController
         invitation.name = invitation.email.split('@', 2).first
       end
 
-      invitation_ary << invitation.save
+      Invitation.transaction do
+        invitation_ary << invitation.save!
+      end
     end
 
     if invitation_ary.all?
